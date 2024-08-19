@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+</head>
+<body>
+    <label for="prod">Valor do Produto: </label>
+        <input type="number" placeholder="Informe o valor do produto" id="prod" name="prod" required>
+        <br><br>
+
+        <label for="desc">Valor do Desconto(em %): </label>
+        <input type="number" placeholder="Informe um número inteiro" id="desc" name="desc" required>
+        <br><br>
+
+        <button onclick="calc()">Calcular</button>
+
+        <script>
+            function calc() {
+                var prod = parseFloat(document.getElementById('prod').value)
+                var desc = parseFloat(document.getElementById('desc').value)
+
+                descv = (desc/100) * prod
+                valorf = prod - descv
+
+                alert(`O valor do desconto é igual a  ${valorf} reais`)
+            }
+        </script>
+</body>
+</html>
